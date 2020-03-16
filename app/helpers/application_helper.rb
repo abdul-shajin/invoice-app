@@ -34,6 +34,8 @@ module ApplicationHelper
     else
       params[:controller]+"-"+params[:action]+"-"+"#{current_user.introduction.send(params[:controller].singularize)}"+"-intro" unless params[:action].eql?('show')
     end
+  rescue
+    "no_class"
   end
 
   def get_introduction_parameter

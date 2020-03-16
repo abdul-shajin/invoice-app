@@ -174,6 +174,7 @@ Osb::Application.routes.draw do
 
     devise_scope :user do
       root :to => "devise/sessions#new"
+      get '/users/sign_out', to: 'devise/sessions#destroy'
     end
 
     #resources :categories
