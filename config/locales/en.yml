@@ -604,6 +604,7 @@ en:
       no_archived_expense: "You don't have any archived expense."
       no_deleted_expense: "You don't have any deleted expense."
       bulk_action_msg: "Expenses are %{action} successfully."
+      form_title_basic: "Basic Details"
 
     items:
       new: "New Item"

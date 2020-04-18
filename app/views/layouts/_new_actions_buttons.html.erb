@@ -9,11 +9,6 @@
       end %>
 <!--    </li>-->
     <li>
-      <%= link_to new_expense_path, class: 'btn-floating dark-brown', data:{ label: t('views.expenses.new') }, remote: true do
-        image_tag('ico-expenses.svg' , alt: t('views.expenses.expenses'))
-      end %>
-    </li>
-    <li>
       <%= link_to new_item_path, class: 'btn-floating grey', data:{label: t('views.items.new')}, remote: true do
         image_tag('ico-items.svg' , alt: t('header.links.items.items'))
       end %>
@@ -36,6 +31,11 @@
     <li>
       <%= link_to new_invoice_path, class: 'btn-floating blue', data:{label: t('header.links.invoices.new')}  do
         image_tag('ico-invoices.svg' , alt: t('header.links.invoices.invoices'))
+      end %>
+    </li>
+    <li>
+      <%= link_to new_expense_path, class: 'btn-floating dark-brown expense-btn', data:{ label: t('views.expenses.new') }, remote: true do
+        image_tag('ico-expenses.svg' , alt: t('views.expenses.expenses'))
       end %>
     </li>
   </ul>

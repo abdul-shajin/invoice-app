@@ -220,6 +220,13 @@ window.preventDeletedNavigation = function(){
     }
 };
 window.preventDeletedNavigation();
+//AjiDevelopmentPhase
+
+$(document).ready(function(){
+  // $('.expense-btn').trigger('click');
+});
+
+//AjiDevelopmentPhase
 $(document).ready(function(){
     display_flash_notice_or_alert_with_toastr();
     bind_deleted_entry();
