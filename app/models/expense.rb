@@ -15,6 +15,8 @@ class Expense < ActiveRecord::Base
   #scopes
   scope :multiple, lambda { |ids| where('id IN(?)', ids.is_a?(String) ? ids.split(',') : [*ids]) }
 
+  accepts_nested_attributes_for :client
+
   # filter companies i.e active, archive, deleted
   def self.filter(params, per_page)
     mappings = {active: 'unarchived', archived: 'archived', deleted: 'only_deleted'}

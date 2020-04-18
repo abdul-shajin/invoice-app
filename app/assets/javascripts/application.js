@@ -223,7 +223,7 @@ window.preventDeletedNavigation();
 //AjiDevelopmentPhase
 
 $(document).ready(function(){
-  // $('.expense-btn').trigger('click');
+  $('.expense-btn').trigger('click');
 });
 
 //AjiDevelopmentPhase

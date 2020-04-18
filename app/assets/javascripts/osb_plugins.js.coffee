@@ -133,8 +133,8 @@ class @OsbPlugins
       number_of_days = $('option:selected', this).attr('number_of_days')
       Invoice.setInvoiceDueDate $('#invoice_date_picker').val(), number_of_days
 
-    $("#invoice_client_id").change ->
-      OsbPlugins.hidePopover($("#invoice_client_id").parents('.select-wrapper'));
+#    $("#invoice_client_id").change ->
+#      OsbPlugins.hidePopover($("#invoice_client_id").parents('.select-wrapper'));
     $("#invoice_due_date_picker").change ->
       OsbPlugins.hidePopover($("#invoice_due_date_picker"));
     # Change currency of invoice

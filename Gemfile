@@ -114,3 +114,8 @@ gem 'to_words'
 gem 'trackstamps'
 gem 'jquery-infinite-pages'
 gem "introjs-rails"
+
+#
+# Add Client is not opening up Client Modal box
+# It starts from nested-form
+# NestedFormEvents.addFields should trigger but not
