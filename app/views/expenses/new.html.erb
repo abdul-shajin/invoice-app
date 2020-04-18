@@ -1,15 +1,33 @@
-<div class="content_top">
-  <div class="primary_heading">
-    <h1><%= t('views.expenses.new_expense') %></h1>
+<%= render 'expense_activity'%>
+<div id="main-content" class='<%= "#{ 'side-show' if side_nav_opened?}"%>'>
+  <div class="flex-wrapper">
+    <div class="flex-item col-sm-12 breadcrum-bar">
+      <div class="card-white-panel">
+        <h3 class="intro estimates-new-false-intro" data-intro="Here you can create your new active expense" data-step="1">
+          <span><%= link_to t('header.links.expenses.expenses'), expenses_url %> </span>
+          <%= link_to "/ #{t('views.common.active')}", expenses_url %>
+        </h3>
+      </div>
+    </div>
   </div>
-</div><!--content_top-->
 
-<%= render 'form' %>
-
-<div id="clients_holder" style="display: none;" class="quick_create_wrapper">
-  <%= render 'clients/new_client' %>
+  <div class="invoice-box-holder">
+    <%= render partial: 'expense_form', locals: {estimate: @expense} %>
+  </div>
 </div>
 
-<div id="taxes_holder" style="display: none;" class="quick_create_wrapper">
-  <%= render 'taxes/new_tax' %>
-</div>
+<!--<div class="content_top">-->
+<!--  <div class="primary_heading">-->
+<!--    <h1><%#= t('views.expenses.new_expense') %></h1>-->
+<!--  </div>-->
+<!--</div><!--content_top-->-->
+
+<%#= render 'form' %>
+
+<!--<div id="clients_holder" style="display: none;" class="quick_create_wrapper">-->
+  <%#= render 'clients/new_client' %>
+<!--</div>-->
+
+<!--<div id="taxes_holder" style="display: none;" class="quick_create_wrapper">-->
+  <%#= render 'taxes/new_tax' %>
+<!--</div>-->

@@ -3627,7 +3627,7 @@ h6 {
   font-size: 14px;
   font-weight: 400; }
 
-.invoice-form-container, .estimate-form-container{
+.invoice-form-container, .estimate-form-container, .expense-form-container{
   .select-wrapper .dropdown-content {
     top: 25px !important;
     font-size: 14px;
@@ -3638,7 +3638,7 @@ h6 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   }
 }
-.invoice-form-container, .estimate-form-container{
+.invoice-form-container, .estimate-form-container, .expense-form-container{
   .select-wrapper .dropdown-content li span {
     color: #454545;
     display: block;
@@ -3648,7 +3648,7 @@ h6 {
     font-weight: 400;
   }
 }
-.invoice-form-container, .estimate-form-container{
+.invoice-form-container, .estimate-form-container, .expense-form-container{
   .select-wrapper input[type=text] {
     font-size: 14px !important;
   }

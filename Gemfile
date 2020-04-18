@@ -35,8 +35,9 @@ gem 'hashie_rails', '0.0.4'
 group :development do
   gem 'better_errors', '2.1.1'
   gem "binding_of_caller", ">= 0.6.9"
-  gem 'pry', '0.10.3'
-  gem 'pry-nav', '0.2.4'
+  #gem 'pry'#, '0.10.3'
+  #gem 'pry-nav'#, '0.2.4'
+  #gem 'pry-rails'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'awesome_print', '1.7.0'
   gem 'quiet_assets', '1.1.0'

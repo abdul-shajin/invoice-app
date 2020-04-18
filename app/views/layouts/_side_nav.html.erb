@@ -69,6 +69,15 @@
         </li>
       <% end %>
 
+      <% if policy(Expense).show? %>
+        <li>
+          <%= active_link_to expenses_path, title: t('header.links.expenses.expenses') do %>
+            <%= image_tag('ico-expenses.svg', alt: t('header.links.expenses.expenses'))%>
+            <span><%= t('header.links.expenses.expenses') %></span>
+          <% end %>
+        </li>
+      <% end %>
+
       <% if policy(Item).show? %>
         <li>
           <%= active_link_to items_path, title: t('header.links.items.items') do %>

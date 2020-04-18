@@ -172,7 +172,6 @@ module ApplicationHelper
 
   def current_company_obj
     Company.find current_company
-
   end
 
   def filter_select_by_companies

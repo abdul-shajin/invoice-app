@@ -46,6 +46,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_listing_layout
   before_filter :authenticate_user!
   before_filter :set_current_company
+  before_action :set_paper_trail_whodunnit
 
   before_action :set_locale
 
@@ -253,5 +254,4 @@ class ApplicationController < ActionController::Base
       redirect_to(request.referrer || root_path)
     end
   end
-
 end

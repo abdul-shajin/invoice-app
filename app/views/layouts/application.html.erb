@@ -26,6 +26,7 @@
       <%= javascript_include_tag "application" %>
       <%= javascript_include_tag "toastr.min.js" %>
       <script>
+          context_show = "<%= Rails.env.development? %>"
           I18n.locale = "<%= I18n.locale %>";
       </script>
       <%= csrf_meta_tags %>

@@ -264,6 +264,7 @@ class @OsbPlugins
       EstimateCalculator.updateEstimateTotal()
 
     # Don't allow paste and right click in discount field
+    #TODO
     $("#estimate_discount_percentage, #recurring_profile_discount_percentage, .qty").bind "paste contextmenu", (e) ->
       e.preventDefault()
 

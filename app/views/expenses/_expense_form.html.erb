@@ -1,0 +1,47 @@
+<div class="new-invoice-holder editInvoice expense-form-container">
+  <%= simple_form_for expense, remote: true, html: { class: 'expense-form form-expense form-horizontal nested-forms' } do |f| %>
+    <div class="new-invoice-header clearfix">
+      <%= render 'form_action_links', f: f %>
+      <%= render 'form_heading', f: f, estimate: estimate %>
+    </div>
+    <div class="scroll-area">
+      <div class="info-section clearfix">
+        <div class="info-left-section">
+          <% expense_date = f.object.expense_date.empty? ? Date.today.strftime(get_date_format) : f.object.estimate_date %>
+          <%= f.input :expense_date, wrapper_tag: :span, label_html: { class: 'intro estimates-new-false-intro', :'data-intro' => 'Here you can select your expense date', :'data-step' => '5'},
+                      input_html: { class: 'date-field-style1 date_picker', value: expense_date }, as: :string %>
+
+
+          <span class="label-font intro estimates-new-false-intro" data-intro = 'Here you can select the client for which you are creating estimate' data-step= '6'><%= t('views.clients.client') %> </span>
+          <% selected_client = @client.present? ? @client.id : f.object.client_id %>
+          <%= f.select :client_id, (options_for_select((load_clients(action_name, estimate.company_id)),
+                                                       selected: selected_client)+"<option value='-1'>#{t('views.common.add_new')}</option>".html_safe),
+                       {prompt: t('views.invoices.select_client'), include_blank: false}, data: {action_path: new_client_path}, class: 'add_link_select estimate-select-client estimate_client select_2' %>
+
+          <div class="paymentInfo">
+            <strong><strong class="estimate_total_strong"></strong>
+              <% selected_currency = estimate_selected_currency(f.object) %>
+              <%= f.input :currency_id, collection: Currency.unscoped.collect{|c| ["#{c.unit}",c.id] }, selected: selected_currency,
+                          include_blank: false, input_html: { class: 'inline-select large-select currency-select', disabled: currency_is_off? },
+                          wrapper_tag: :small, label: false %>
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="invoice-add-notes">
+      <a href="#"><i class="material-icons">chat</i> </a>
+      <%= f.input :note, label: false, as: :text,
+                  input_html: { placeholder: t('views.common.add_notes'), maxlength: 400},
+                  wrapper_html: { class: 'invoice-add-notes-textare'} %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+    $(document).ready(function (){
+
+    });
+</script>

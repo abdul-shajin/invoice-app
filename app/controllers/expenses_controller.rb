@@ -10,7 +10,7 @@ class ExpensesController < ApplicationController
     @status = params[:status]
     @expenses = Expense.joins(:client, :category).filter(params,@per_page).order("#{sort_column} #{sort_direction}")
     @expenses = filter_by_company(@expenses)
-    @expense_activity = Reporting::ExpenseActivity.get_recent_activity(get_company_id, @per_page, params)
+    @expense_activity = Reporting::ExpenseActivity.get_recent_activity(get_company_id, @per_page, params.deep_dup)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: expenses }
@@ -31,6 +31,7 @@ class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
     @expense.company_id = get_company_id()
+    @expense_activity = Reporting::ExpenseActivity.get_recent_activity(get_company_id, @per_page, params.deep_dup)
     respond_to do |format|
       format.html
       format.js

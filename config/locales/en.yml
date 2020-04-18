@@ -594,6 +594,7 @@ en:
       expenses: "Expenses"
       listing: "Expenses Listing"
       new_expense: "New Expense"
+      new: "New Expense"
       edit_expense: "Edit Expense"
       note: "Note"
       category: "Category"

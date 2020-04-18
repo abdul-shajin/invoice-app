@@ -398,8 +398,9 @@ function initSelectActionLink(){
 }
 
 function disable_right_click_for_browser() {
+    // Remove this after devleopment
     $("body").on("contextmenu", function () {
-        return false;
+        return context_show;
     });
 }
 
