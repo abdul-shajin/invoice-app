@@ -25,7 +25,7 @@ end
 gem 'active_link_to', '1.0.3'
 gem 'jquery-rails', '~> 3.1.3'
 gem 'nested_form', '0.3.2'
-gem 'kaminari', '0.17.0'
+gem 'kaminari', '1.2.1'
 gem 'acts_as_archival', '1.1.1'
 gem 'paranoia', '2.1.5'
 gem 'activerecord-mysql-adapter', '0.0.1'
