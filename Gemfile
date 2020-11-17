@@ -11,7 +11,7 @@ gem 'devise-encryptable', '0.2.0'
 gem 'slim-rails', '3.1.0'
 gem 'twitter-bootstrap-rails', '~> 2.1.9'
 gem 'rails-settings-cached', '0.6.6'
-gem 'rake', '< 11.0'
+gem 'rake', '< 14.0'
 gem 'responders', '~> 2.0'
 
 group :assets do
