@@ -46,7 +46,7 @@ group :development do
 end
 gem 'capistrano-rvm', '0.1.2'
 gem 'browser', '2.1.0'
-gem 'gon', '6.0.1'
+gem 'gon', '6.4.0'
 gem 'rest-client', '1.8.0'
 gem 'slim', '3.0.7'
 gem 'paypal-sdk-rest', '1.4.6'
